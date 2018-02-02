@@ -1,6 +1,6 @@
-package com.epam.repository;
+package com.epam.smartman.repository;
 
-import com.epam.domain.User;
+import com.epam.smartman.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

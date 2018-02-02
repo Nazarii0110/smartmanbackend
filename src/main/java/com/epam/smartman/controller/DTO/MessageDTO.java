@@ -1,4 +1,4 @@
-package com.epam.controller.DTO;
+package com.epam.smartman.controller.DTO;
 
 public class MessageDTO {
     private String message;

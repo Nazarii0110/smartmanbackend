@@ -1,8 +1,8 @@
-package com.epam.controller;
+package com.epam.smartman.controller;
 
-import com.epam.controller.DTO.UserDTO;
-import com.epam.domain.User;
-import com.epam.service.UserService;
+import com.epam.smartman.controller.DTO.UserDTO;
+import com.epam.smartman.domain.User;
+import com.epam.smartman.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.http.*;
