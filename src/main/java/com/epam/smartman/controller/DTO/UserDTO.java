@@ -1,7 +1,7 @@
-package com.epam.controller.DTO;
+package com.epam.smartman.controller.DTO;
 
 
-import com.epam.domain.User;
+import com.epam.smartman.domain.User;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceSupport;
 

@@ -1,6 +1,4 @@
-package com.epam.config;
-
-import org.springframework.context.annotation.Configuration;
+package com.epam.smartman.config;
 
 //import org.springframework.security.config.annotation.web.configuration.*;
 //

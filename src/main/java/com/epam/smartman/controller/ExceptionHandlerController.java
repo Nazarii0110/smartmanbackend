@@ -1,6 +1,6 @@
-package com.epam.controller;
+package com.epam.smartman.controller;
 
-import com.epam.controller.DTO.MessageDTO;
+import com.epam.smartman.controller.DTO.MessageDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

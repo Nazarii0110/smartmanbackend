@@ -1,4 +1,4 @@
-package com.epam.domain;
+package com.epam.smartman.domain;
 
 import javax.persistence.*;
 

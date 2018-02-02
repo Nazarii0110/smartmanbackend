@@ -1,4 +1,4 @@
-package com.epam.config;
+package com.epam.smartman.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

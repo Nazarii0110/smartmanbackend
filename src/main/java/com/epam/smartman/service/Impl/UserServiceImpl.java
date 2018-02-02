@@ -1,8 +1,8 @@
-package com.epam.service.Impl;
+package com.epam.smartman.service.Impl;
 
-import com.epam.domain.User;
-import com.epam.repository.UserRepository;
-import com.epam.service.UserService;
+import com.epam.smartman.domain.User;
+import com.epam.smartman.repository.UserRepository;
+import com.epam.smartman.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +20,8 @@ public class UserServiceImpl implements UserService {
     }
 
     public User getUser(Long userId) {
-        User user = userRepository.findById(userId).get();
-        if (user == null) throw new NoSuchElementException();
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new NoSuchElementException("Such user is not present"));
         return user;
     }
 
@@ -32,8 +32,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     public void updateUser(User updatedUser, Long userId) {
-        User user = userRepository.findById(userId).get();
-        if (user == null) throw new NoSuchElementException();
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new NoSuchElementException("Such user is not present"));
         user.setSurname(updatedUser.getSurname());
         user.setName(updatedUser.getName());
         user.setMiddleName(updatedUser.getMiddleName());
@@ -42,8 +42,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     public void deleteUser(Long userId) {
-        User user = userRepository.findById(userId).get();//2.0.0.M7
-        if (user == null) throw new NoSuchElementException();
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new NoSuchElementException("Such user is not present"));
         userRepository.delete(user);
     }
 }
