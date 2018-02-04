@@ -22,7 +22,7 @@ public class UserDTO extends ResourceSupport {
     }
 
     public String getName() {
-        return user.getName();
+        return user.getUsername();
     }
 
     public String getMiddleName() {

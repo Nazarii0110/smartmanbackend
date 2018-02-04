@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping(value = "/api/user")
+    @RequestMapping(value = "/api/user")
     public ResponseEntity<List<UserDTO>> getAllUsers() {
         List<User> userList = userService.getAllUsers();
         Link link = linkTo(methodOn(UserController.class).getAllUsers()).withSelfRel();

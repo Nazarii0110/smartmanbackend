@@ -12,6 +12,7 @@ import java.util.NoSuchElementException;
 
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     UserRepository userRepository;
 
@@ -35,7 +36,7 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new NoSuchElementException("Such user is not present"));
         user.setSurname(updatedUser.getSurname());
-        user.setName(updatedUser.getName());
+        user.setUsername(updatedUser.getUsername());
         user.setMiddleName(updatedUser.getMiddleName());
         userRepository.save(user);
     }

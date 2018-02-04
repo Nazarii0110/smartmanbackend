@@ -11,9 +11,11 @@ public class User {
     @Column(name = "surname", nullable = false, length = 45)
     private String surname;
     @Column(name = "name", nullable = false, length = 45)
-    private String name;
+    private String username;
     @Column(name = "middle_name", nullable = true, length = 45)
     private String middleName;
+    @Column(name = "password" , nullable = false, length = 45)
+    private String password;
 
     public Long getId() {
         return id;
@@ -31,12 +33,12 @@ public class User {
         this.surname = surname;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String name) {
+        this.username = name;
     }
 
     public String getMiddleName() {
@@ -45,6 +47,15 @@ public class User {
 
     public void setMiddleName(String midleName) {
         this.middleName = midleName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public User setPassword(String password) {
+        this.password = password;
+        return this;
     }
 
     @Override
@@ -56,7 +67,7 @@ public class User {
 
         if (id != null ? !id.equals(user.id) : user.id != null) return false;
         if (surname != null ? !surname.equals(user.surname) : user.surname != null) return false;
-        if (name != null ? !name.equals(user.name) : user.name != null) return false;
+        if (username != null ? !username.equals(user.username) : user.username != null) return false;
         if (middleName != null ? !middleName.equals(user.middleName) : user.middleName != null) return false;
 
         return true;
@@ -66,7 +77,7 @@ public class User {
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (username != null ? username.hashCode() : 0);
         result = 31 * result + (middleName != null ? middleName.hashCode() : 0);
         return result;
     }
